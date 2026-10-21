@@ -17,9 +17,9 @@ module tb ();
   reg clk;
   reg rst_n;
   reg ena;
-  reg [7:0] data_2_convert;
+  reg [7:0] ui_in;
   reg [7:0] uio_in;
-  wire [7:0] hash;
+  wire [7:0] uo_out;
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
 `ifdef GL_TEST
@@ -36,8 +36,8 @@ module tb ();
       .VGND(VGND),
 `endif
 
-      .data_2_convert  (data_2_convert),    // Dedicated inputs
-      .hash (hash),   // Dedicated outputs
+      .ui_in  (ui_in),    // Dedicated inputs
+      .uo_out (uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
       .uio_out(uio_out),  // IOs: Output path
       .uio_oe (uio_oe),   // IOs: Enable path (active high: 0=input, 1=output)
