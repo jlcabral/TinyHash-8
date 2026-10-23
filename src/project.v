@@ -43,6 +43,9 @@ module tt_um_jlcabral_tinyhash_8 (
     assign uio_out = 8'b0;
     assign uio_oe  = 8'b0;
 
+      // List all unused inputs to prevent warnings
+    wire _unused = &{clk, rst_n, uio_in, 1'b0};
+
 endmodule
 
 `default_nettype wire
