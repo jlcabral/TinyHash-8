@@ -31,6 +31,7 @@ async def test_project(dut):
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 3)
     assert dut.uo_out.value == vector[0]
+    dut._log.info( "JLCL: " + str(dut.uo_out.value) )
     
     dut._log.info("Test #2. JLCL")
     # Set the input values you want to test
@@ -38,6 +39,7 @@ async def test_project(dut):
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 3)
     assert dut.uo_out.value == vector[1]
+    dut._log.info( "JLCL: " + str(dut.uo_out.value) )
 
     # Keep testing the module by changing the input values, waiting for
     # one or more clock cycles, and asserting the expected output values.
