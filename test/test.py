@@ -56,7 +56,7 @@ async def test_project(dut):
     dut.ui_in.value = 20
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 3)
-    assert dut.uo_out.value == vector[20-1]
+    assert dut.uo_out.value == vector[20]
     dut._log.info( "JLCL: " + str(dut.uo_out.value) )
     
     dut._log.info("Test #2. JLCL")
@@ -64,7 +64,7 @@ async def test_project(dut):
     dut.ui_in.value = 21
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 3)
-    assert dut.uo_out.value == vector[21-1]
+    assert dut.uo_out.value == vector[21]
     dut._log.info( "JLCL: " + str(dut.uo_out.value) )
 
     # Keep testing the module by changing the input values, waiting for
