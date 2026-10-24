@@ -31,7 +31,8 @@ async def test_project(dut):
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 3)
     assert dut.uo_out.value == vector[0]
-
+    
+    dut._log.info("Test #2. JLCL")
     # Set the input values you want to test
     dut.ui_in.value = 21
     # Wait for one clock cycle to see the output values
