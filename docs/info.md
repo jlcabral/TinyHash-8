@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This architecture explores a lightweight alternative for generating values with potential applications in hardware hash functions. It implements an 8-bit ARX mixer that transforms each 8-bit input into a unique 8-bit output. The design implements a permutation of all 256 possible 8-bit values, ensuring a one-to-one mapping without collisions.
 
 ## How to test
 
-Explain how to use your project
+Insert 8-bit numbers, and you will get 8-bits as an output, with a one-to-one mapping without collisions.
 
 ## External hardware
 
