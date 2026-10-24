@@ -23,7 +23,7 @@ async def test_project(dut):
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
 
-    vector2 = [63, 35, 242, 166, 144, 129, 40, 116, 80, 44,
+    vector = [63, 35, 242, 166, 144, 129, 40, 116, 80, 44,
     113, 117, 195, 167, 203, 183, 111, 209, 14, 2,
     150, 127, 94, 114, 202, 58, 103, 59, 170, 228,
     162, 182, 151, 168, 186, 174, 136, 121, 48, 97,
@@ -50,13 +50,13 @@ async def test_project(dut):
     45, 231, 187, 175, 64, 93, 120, 68, 220, 156,
     133, 89, 29, 15, 212, 9]
     dut._log.info("Test project behavior. JLCL")
-    vector = [150, 127]
+    # vector = [150, 127]
 
     # Set the input values you want to test
     dut.ui_in.value = 20
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 3)
-    assert dut.uo_out.value == vector[0]
+    assert dut.uo_out.value == vector[20-1]
     dut._log.info( "JLCL: " + str(dut.uo_out.value) )
     
     dut._log.info("Test #2. JLCL")
@@ -64,7 +64,7 @@ async def test_project(dut):
     dut.ui_in.value = 21
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 3)
-    assert dut.uo_out.value == vector[1]
+    assert dut.uo_out.value == vector[21-1]
     dut._log.info( "JLCL: " + str(dut.uo_out.value) )
 
     # Keep testing the module by changing the input values, waiting for
