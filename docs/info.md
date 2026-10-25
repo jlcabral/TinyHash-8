@@ -15,7 +15,7 @@ This architecture explores a lightweight alternative for generating values with 
 
 Insert 8-bit numbers, and you will get 8-bits as an output, with a one-to-one mapping without collisions.c
 
-We emulate TinyHash's behavior using C code, available here: Link. The resulting output values were added to the test suite in `test/test.py` as the variable `vector`. All test vectors produced matching results between the C emulation and our Verilog implementation.
+We emulate TinyHash's behavior using C code, available here: [Link](https://drive.google.com/file/d/1V6Rg9BzgG4DnIiHkh1yTmEiHju5fDaJ0/view?usp=drive_link). The resulting output values were added to the test suite in `test/test.py` as the variable `vector`. All test vectors produced matching results between the C emulation and our Verilog implementation.
 
 ## External hardware
 
