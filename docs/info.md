@@ -19,4 +19,4 @@ We emulate TinyHash's behavior using C code, available here: [Link](https://driv
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Not required
