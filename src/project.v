@@ -37,14 +37,14 @@ module tt_um_jlcabral_tinyhash_8 (
     assign r4_out = {r4_add[2:0], r4_add[7:3]};
 
     // Combinational output
-    assign uo_out  = ena ? r4_out : 8'b0;
+    assign uo_out  = (ena & rst_n) ? r4_out : 8'b0;
 
     // Unused bidirectional IOs
     assign uio_out = 8'b0;
     assign uio_oe  = 8'b0;
 
       // List all unused inputs to prevent warnings
-    wire _unused = &{clk, rst_n, uio_in, 1'b0};
+    wire _unused = &{clk, uio_in, 1'b0};
 
 endmodule
 
