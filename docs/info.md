@@ -20,3 +20,7 @@ We emulate TinyHash's behavior using C code, available here: [Link](https://driv
 ## External hardware
 
 Not required
+
+## Acknowledge
+
+We thank Universidad Distrital Francisco José de Caldas for providing us with the opportunity to participate in this project.
