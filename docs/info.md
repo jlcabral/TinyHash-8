@@ -13,7 +13,9 @@ This architecture explores a lightweight alternative for generating values with 
 
 ## How to test
 
-Insert 8-bit numbers, and you will get 8-bits as an output, with a one-to-one mapping without collisions.
+Insert 8-bit numbers, and you will get 8-bits as an output, with a one-to-one mapping without collisions.c
+
+We emulate TinyHash's behavior using C code, available here: Link. The resulting output values were added to the test suite in `test/test.py` as the variable `vector`. All test vectors produced matching results between the C emulation and our Verilog implementation.
 
 ## External hardware
 
